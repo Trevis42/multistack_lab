@@ -1,2 +1,6 @@
 # multistack_lab
 Datasturctures lab dealing with creating a multistack and resizing and moving the stacks depending on space needed.
+
+This lab required the use of a fixed array length (provided by user) as the main memory for each stack to reside in. Each stack was then created using data provided from a test file. The system would read in comments and determing which stack to place the item. there where also delete commands in the file for removing of items. These inputs and deletes where provided by the instructor of the class such that the growth of some stacks would happen quickly. This tested our code to see if it would reallocate and move stacks appropriately. Part of this lab was to implement Warshall's Alogrithm to facilitate the moving of each stack. 
+
+The main constraints placed on the lab was no heap memory for the arrays was allowed to be used. With C#, Span<T> with a stackalloc array was utilized for creating and maintianing the array on the stack. IO redirections was also used for input and output as part of the grading requirements. Another option, to obtain a higher grade, involved creating on array for tracking the old growth, old top and new base of each array during move and reallocate for memory effeciency.
