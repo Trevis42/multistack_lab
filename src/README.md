@@ -1,4 +1,4 @@
 # Source code
 ### Multistack lab from SHSU course COSC 3319 Data Structures
 
-This is the entire Visual Studio solution/project folder for the lab. It includes in the .bin folder the input and output files used in the program.
+This is the Visual Studio solution and project folder for the lab. It includes in the Bin/Debug/netcoreapp2.1 folder are the input and output files (DataIn.txt, DataOut.txt) used in the program.
