@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MultiStack_Lab1_dotnetCore": {
+      "commandName": "Project",
+      "commandLineArgs": "< DataIn.txt > DataOut.txt"
+    }
+  }
+}
