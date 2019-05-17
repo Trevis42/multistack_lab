@@ -1,0 +1,316 @@
+======================================================
+============           Option B          =============
+======================================================
+
+Enter stack lower bounds:
+Enter stack upper bounds:
+Enter number of stacks: 
+Enter starting mem location (L0): 
+Enter maximum mem location (M): 
++++++    BASE   +++++
+items in array[0]: 0
+items in array[1]: 8
+items in array[2]: 16
+items in array[3]: 24
+items in array[4]: 33
+
++++++    TOP    +++++
+items in array[0]: 0
+items in array[1]: 8
+items in array[2]: 16
+items in array[3]: 24
+
+PUSH Joe     to:   stack(1) @ location[01]
+PUSH Bob     to:   stack(1) @ location[02]
+PUSH Devin   to:   stack(1) @ location[03]
+PUSH Elwin   to:   stack(1) @ location[04]
+PUSH Sagar   to:   stack(3) @ location[17]
+PUSH Ryan    to:   stack(3) @ location[18]
+POP  Elwin   from: stack(1) @ location[04]
+PUSH Kyle    to:   stack(2) @ location[09]
+PUSH Tyler   to:   stack(2) @ location[10]
+PUSH Minh    to:   stack(2) @ location[11]
+PUSH Adrian  to:   stack(3) @ location[19]
+PUSH Daniel  to:   stack(4) @ location[25]
+PUSH Jailene to:   stack(4) @ location[26]
+PUSH Jacob   to:   stack(3) @ location[20]
+PUSH Bryce   to:   stack(3) @ location[21]
+PUSH Ryan    to:   stack(1) @ location[04]
+PUSH Jaylene to:   stack(4) @ location[27]
+PUSH Sagar   to:   stack(1) @ location[05]
+PUSH Ayran   to:   stack(3) @ location[22]
+PUSH Travis  to:   stack(3) @ location[23]
+PUSH Devin   to:   stack(3) @ location[24]
+POP  Minh    from: stack(2) @ location[11]
+POP  Jaylene from: stack(4) @ location[27]
+POP  Jailene from: stack(4) @ location[26]
+PUSH Rahul   to:   stack(3) @ location[25]
+
+** !!Overflow!! **
+v============== BEFORE REALLOC ==============v
++++++    BASE   +++++
+items in array[0]: 0
+items in array[1]: 8
+items in array[2]: 16
+items in array[3]: 24
+items in array[4]: 33
+
++++++    TOP    +++++
+items in array[0]: 5
+items in array[1]: 10
+items in array[2]: 25
+items in array[3]: 25
+
++++++   OLDTOP  +++++
+items in array[0]: 0
+items in array[1]: 8
+items in array[2]: 16
+items in array[3]: 24
+items in array[4]: 33
+
++++++  USEDMEM  +++++
+MainMemory[00]:               Base(1)
+MainMemory[01]: Joe                 
+MainMemory[02]: Bob                 
+MainMemory[03]: Devin               
+MainMemory[04]: Ryan                
+MainMemory[05]: Sagar         Top(1)
+MainMemory[06]:                     
+MainMemory[07]:                     
+MainMemory[08]:               Base(2)
+MainMemory[09]: Kyle                
+MainMemory[10]: Tyler         Top(2)
+MainMemory[11]:                     
+MainMemory[12]:                     
+MainMemory[13]:                     
+MainMemory[14]:                     
+MainMemory[15]:                     
+MainMemory[16]:               Base(3)
+MainMemory[17]: Sagar               
+MainMemory[18]: Ryan                
+MainMemory[19]: Adrian              
+MainMemory[20]: Jacob               
+MainMemory[21]: Bryce               
+MainMemory[22]: Ayran               
+MainMemory[23]: Travis              
+MainMemory[24]: Devin         Base(4)
+MainMemory[25]: Daniel        Top(3)
+MainMemory[26]:                     
+MainMemory[27]:                     
+MainMemory[28]:                     
+MainMemory[29]:                     
+MainMemory[30]:                     
+MainMemory[31]:                     
+MainMemory[32]:                     
+MainMemory[33]:               Base(5)
+^===========================================^
+
+++++   Insert problematic item (after moving stacks):   ++++
+PUSH Rahul   to: S3 @ location[22]
+v============== AFTER REALLOC ==============v
++++++    BASE   +++++
+items in array[0]: 0
+items in array[1]: 9
+items in array[2]: 13
+items in array[3]: 30
+items in array[4]: 33
+
++++++    TOP    +++++
+items in array[0]: 5
+items in array[1]: 11
+items in array[2]: 22
+items in array[3]: 31
+
++++++  USEDMEM  +++++
+MainMemory[00]:               Base(1)
+MainMemory[01]: Joe                 
+MainMemory[02]: Bob                 
+MainMemory[03]: Devin               
+MainMemory[04]: Ryan                
+MainMemory[05]: Sagar         Top(1)
+MainMemory[06]:                     
+MainMemory[07]:                     
+MainMemory[08]:                     
+MainMemory[09]:               Base(2)
+MainMemory[10]: Kyle                
+MainMemory[11]: Tyler         Top(2)
+MainMemory[12]:                     
+MainMemory[13]:               Base(3)
+MainMemory[14]: Sagar               
+MainMemory[15]: Ryan                
+MainMemory[16]: Adrian              
+MainMemory[17]: Jacob               
+MainMemory[18]: Bryce               
+MainMemory[19]: Ayran               
+MainMemory[20]: Travis              
+MainMemory[21]: Devin               
+MainMemory[22]: Rahul         Top(3)
+MainMemory[23]:                     
+MainMemory[24]:                     
+MainMemory[25]:                     
+MainMemory[26]:                     
+MainMemory[27]:                     
+MainMemory[28]:                     
+MainMemory[29]:                     
+MainMemory[30]:               Base(4)
+MainMemory[31]: Daniel        Top(4)
+MainMemory[32]:                     
+MainMemory[33]:               Base(5)
+^===========================================^
+
+PUSH Elwin   to:   stack(3) @ location[23]
+PUSH Victor  to:   stack(1) @ location[06]
+PUSH Corey   to:   stack(1) @ location[07]
+PUSH Bipin   to:   stack(1) @ location[08]
+PUSH Frank   to:   stack(1) @ location[09]
+PUSH Nathan  to:   stack(1) @ location[10]
+
+** !!Overflow!! **
+v============== BEFORE REALLOC ==============v
++++++    BASE   +++++
+items in array[0]: 0
+items in array[1]: 9
+items in array[2]: 13
+items in array[3]: 30
+items in array[4]: 33
+
++++++    TOP    +++++
+items in array[0]: 10
+items in array[1]: 11
+items in array[2]: 23
+items in array[3]: 31
+
++++++   OLDTOP  +++++
+items in array[0]: 5
+items in array[1]: 11
+items in array[2]: 22
+items in array[3]: 31
+items in array[4]: 33
+
++++++  USEDMEM  +++++
+MainMemory[00]:               Base(1)
+MainMemory[01]: Joe                 
+MainMemory[02]: Bob                 
+MainMemory[03]: Devin               
+MainMemory[04]: Ryan                
+MainMemory[05]: Sagar               
+MainMemory[06]: Victor              
+MainMemory[07]: Corey               
+MainMemory[08]: Bipin               
+MainMemory[09]: Frank         Base(2)
+MainMemory[10]: Kyle          Top(1)
+MainMemory[11]: Tyler         Top(2)
+MainMemory[12]:                     
+MainMemory[13]:               Base(3)
+MainMemory[14]: Sagar               
+MainMemory[15]: Ryan                
+MainMemory[16]: Adrian              
+MainMemory[17]: Jacob               
+MainMemory[18]: Bryce               
+MainMemory[19]: Ayran               
+MainMemory[20]: Travis              
+MainMemory[21]: Devin               
+MainMemory[22]: Rahul               
+MainMemory[23]: Elwin         Top(3)
+MainMemory[24]:                     
+MainMemory[25]:                     
+MainMemory[26]:                     
+MainMemory[27]:                     
+MainMemory[28]:                     
+MainMemory[29]:                     
+MainMemory[30]:               Base(4)
+MainMemory[31]: Daniel        Top(4)
+MainMemory[32]:                     
+MainMemory[33]:               Base(5)
+^===========================================^
+
+++++   Insert problematic item (after moving stacks):   ++++
+PUSH Nathan  to: S1 @ location[10]
+v============== AFTER REALLOC ==============v
++++++    BASE   +++++
+items in array[0]: 0
+items in array[1]: 17
+items in array[2]: 19
+items in array[3]: 31
+items in array[4]: 33
+
++++++    TOP    +++++
+items in array[0]: 10
+items in array[1]: 19
+items in array[2]: 29
+items in array[3]: 32
+
++++++  USEDMEM  +++++
+MainMemory[00]:               Base(1)
+MainMemory[01]: Joe                 
+MainMemory[02]: Bob                 
+MainMemory[03]: Devin               
+MainMemory[04]: Ryan                
+MainMemory[05]: Sagar               
+MainMemory[06]: Victor              
+MainMemory[07]: Corey               
+MainMemory[08]: Bipin               
+MainMemory[09]: Frank               
+MainMemory[10]: Nathan        Top(1)
+MainMemory[11]:                     
+MainMemory[12]:                     
+MainMemory[13]:                     
+MainMemory[14]:                     
+MainMemory[15]:                     
+MainMemory[16]:                     
+MainMemory[17]:               Base(2)
+MainMemory[18]: Kyle                
+MainMemory[19]: Tyler         Base(3) Top(2)
+MainMemory[20]: Sagar               
+MainMemory[21]: Ryan                
+MainMemory[22]: Adrian              
+MainMemory[23]: Jacob               
+MainMemory[24]: Bryce               
+MainMemory[25]: Ayran               
+MainMemory[26]: Travis              
+MainMemory[27]: Devin               
+MainMemory[28]: Rahul               
+MainMemory[29]: Elwin         Top(3)
+MainMemory[30]:                     
+MainMemory[31]:               Base(4)
+MainMemory[32]: Daniel        Top(4)
+MainMemory[33]:               Base(5)
+^===========================================^
+
+PUSH Amber   to:   stack(1) @ location[11]
+PUSH Amy     to:   stack(1) @ location[12]
+***** memArrayUsable *****
+MainMemory[00]:               Base(1)
+MainMemory[01]: Joe                 
+MainMemory[02]: Bob                 
+MainMemory[03]: Devin               
+MainMemory[04]: Ryan                
+MainMemory[05]: Sagar               
+MainMemory[06]: Victor              
+MainMemory[07]: Corey               
+MainMemory[08]: Bipin               
+MainMemory[09]: Frank               
+MainMemory[10]: Nathan              
+MainMemory[11]: Amber               
+MainMemory[12]: Amy           Top(1)
+MainMemory[13]:                     
+MainMemory[14]:                     
+MainMemory[15]:                     
+MainMemory[16]:                     
+MainMemory[17]:               Base(2)
+MainMemory[18]: Kyle                
+MainMemory[19]: Tyler         Base(3) Top(2)
+MainMemory[20]: Sagar               
+MainMemory[21]: Ryan                
+MainMemory[22]: Adrian              
+MainMemory[23]: Jacob               
+MainMemory[24]: Bryce               
+MainMemory[25]: Ayran               
+MainMemory[26]: Travis              
+MainMemory[27]: Devin               
+MainMemory[28]: Rahul               
+MainMemory[29]: Elwin         Top(3)
+MainMemory[30]:                     
+MainMemory[31]:               Base(4)
+MainMemory[32]: Daniel        Top(4)
+MainMemory[33]:               Base(5)
